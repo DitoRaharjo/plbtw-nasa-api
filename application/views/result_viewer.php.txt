@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mob Tees</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Mob Tees</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<ul data-role="listview" data-filter="true" data-inset="true">
+		<?php
+   			foreach($products as $rows)
+{
+?>
+	
+    <li><a href="#">
+        <img src="http://tees.co.id/public/uploads/images/<?php echo $rows->image_thumb; ?>">
+    <h2><?php echo $rows->name; ?></h2>
+    <p><?php echo $rows->price; ?></p></a>
+    </li>
+    
+	</ul>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
